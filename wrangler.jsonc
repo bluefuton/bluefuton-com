@@ -4,5 +4,8 @@
   "compatibility_date": "2026-09-26",
   "assets": {
     "directory": "."
-  }
+  },
+  // Required for branch/PR preview builds (wrangler preview).
+  // Assets stay top-level; there are no bindings to override.
+  "previews": {}
 }
