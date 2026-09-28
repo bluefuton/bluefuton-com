@@ -1,0 +1,8 @@
+{
+  // Static site: serve the repo root as assets, no Worker script needed.
+  "name": "bluefuton-com",
+  "compatibility_date": "2026-09-26",
+  "assets": {
+    "directory": "."
+  }
+}
