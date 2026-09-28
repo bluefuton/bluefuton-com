@@ -68,7 +68,7 @@
 
     @container page (width > 720px) { grid-column:1 / 9; }
     font-weight:700;
-    font-size:clamp(64px, 19cqi, 208px);
+    font-size:clamp(52px, 12.5cqi, 136px);
     line-height:.86;
     letter-spacing:-0.035em;
     font-kerning:normal;
@@ -90,7 +90,7 @@
   .turbine { fill:none; stroke:color-mix(in oklch, var(--ink) 45%, var(--paper)); stroke-width:1.5; stroke-linecap:round; }
   .bike { fill:none; stroke:var(--red); stroke-width:1.8; stroke-linecap:round; stroke-linejoin:round; }
 
-  .rows { margin-top:0; }
+  .rows { margin-top:clamp(32px, 5cqi, 56px); }
 
   .row {
     grid-column:1 / -1;
@@ -292,7 +292,7 @@
   const mood = kmh =>
     kmh < 10 ? 'Calm, for once' :
     kmh < 25 ? 'Breezy' :
-    kmh < 40 ? 'Proper Wellington' :
+    kmh < 40 ? 'Proper windy' :
     kmh < 60 ? 'Blowing a gale' : 'Hold onto your hat';
   try {
     const url = 'https://api.open-meteo.com/v1/forecast?latitude=-41.29&longitude=174.78'
