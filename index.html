@@ -364,8 +364,8 @@
 
     document.getElementById('wind').textContent = `${speed} km/h ${point}`;
     document.getElementById('wind-note').textContent = mood(speed);
-    // Arrow points the way the wind is blowing (away from its source)
-    document.getElementById('vane').style.setProperty('--dir', (from + 180) + 'deg');
+    // Arrow points towards where the wind is coming from, matching the compass label
+    document.getElementById('vane').style.setProperty('--dir', from + 'deg');
     // Turbine: faster wind, faster blades
     const secs = Math.min(10, Math.max(0.35, 45 / Math.max(speed, 1)));
     document.getElementById('rotor-spin').setAttribute('dur', secs.toFixed(2) + 's');
