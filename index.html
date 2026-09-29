@@ -226,12 +226,31 @@
 
   footer {
     display:flex;
+    flex-wrap:wrap;
     justify-content:space-between;
     gap:12px;
     border-top:3px solid var(--ink);
     padding-top:10px;
     font-weight:700;
     font-size:13px;
+  }
+
+  footer .credit {
+    flex-basis:100%;
+    margin:4px 0 0;
+    font-weight:400;
+    font-size:11px;
+    color:var(--grey);
+
+    & a {
+      color:inherit;
+      border-bottom:0;
+      text-decoration:underline;
+      text-decoration-thickness:1px;
+      text-underline-offset:2px;
+
+      &:hover { color:var(--ink); }
+    }
   }
 }
 
@@ -333,7 +352,7 @@
     </section>
   </main>
 
-  <footer><a class="email" id="email" href="#" data-u="chris" data-d="bluefuton.com">chris [at] bluefuton.com</a><a href="https://www.linkedin.com/in/bluefuton/" rel="me">LinkedIn</a></footer>
+  <footer><a class="email" id="email" href="#" data-u="chris" data-d="bluefuton.com">chris [at] bluefuton.com</a><a href="https://www.linkedin.com/in/bluefuton/" rel="me">LinkedIn</a><p class="credit">Wind data by <a href="https://open-meteo.com/">Open-Meteo.com</a>, licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.</p></footer>
 </div>
 <script>
 /* Build the email link in the browser so the address isn't sitting in the HTML for scrapers */
