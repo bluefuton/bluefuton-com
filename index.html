@@ -246,8 +246,10 @@
 
   footer .credit {
     grid-area:credit;
-    margin:0;
+    margin:14px 0 0;   /* more breathing room when it sits below the links */
     text-align:center;
+
+    @container page (width > 640px) { margin:0; }
     font-weight:400;
     font-size:11px;
     color:var(--grey);
