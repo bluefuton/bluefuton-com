@@ -225,19 +225,28 @@
   }
 
   footer {
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:space-between;
+    display:grid;
+    grid-template-columns:auto 1fr auto;
+    grid-template-areas:"email . linkedin" "credit credit credit";
+    align-items:baseline;
     gap:12px;
+
+    /* Room for everything on one line: put the credit between the two links */
+    @container page (width > 640px) {
+      grid-template-areas:"email credit linkedin";
+    }
     border-top:3px solid var(--ink);
     padding-top:10px;
     font-weight:700;
     font-size:13px;
   }
 
+  footer .email { grid-area:email; }
+  footer a[rel="me"] { grid-area:linkedin; justify-self:end; }
+
   footer .credit {
-    flex-basis:100%;
-    margin:4px 0 0;
+    grid-area:credit;
+    margin:0;
     text-align:center;
     font-weight:400;
     font-size:11px;
